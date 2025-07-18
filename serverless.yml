@@ -10,7 +10,8 @@ provider:
   iam:
     role: arn:aws:iam::546297147037:role/LabRole
   environment:
-    SECRET_NAME: rds_mysql_alumnos_user_${sls:stage}  # dev, test, prod
+    DB_NAME: ${sls:stage}
+
 
 functions:
   listar:
